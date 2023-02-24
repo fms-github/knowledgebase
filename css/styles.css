@@ -1,6 +1,7 @@
 body {
     background-color: #FFFFFF;
     color: #000000;
+    font-family: poppins;
     margin: 0;
     
 }
@@ -164,4 +165,10 @@ li {
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+  }
+
+  /**************************************************** Table Styles *******************************************************/
+
+  table, td, tr, th {
+    border: 1px solid #444;
   }

@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="icons/manual.ico">
     <link rel="stylesheet" href="css\styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
     <title>HSCS | Knowledge Base</title>
 </head>
 <body>
     <header><!--  contains logo and top bar with search input -->
         <div class="logo-container">
-            <img class="img-logo" src="img\hanhaa-logo-supply-chain-solutions_V1.png" alt="hscs-logo-png" width="225px">
+            <a href="index.html"><img class="img-logo" src="img\hanhaa-logo-supply-chain-solutions_V1.png" alt="hscs-logo-png" width="225px"></a>
         </div>
         <div class="search-bar">
             <button onclick="darkmodeFunction" id="darkBtn" title="Dark Mode">Toggle Dark Mode</button><!---Toggle dark mode button to complete-->
@@ -25,8 +28,8 @@
     <div class="container">
         <div class="left-container">
             <ul>The Hub
-                <a href="/dev-blog.html"><li class="menu-item-updates">Dev Blog</li></a>
-                <a href="/overview.html"><li class="menu-item-getting-started">Overview</li></a>
+                <a href="dev-blog.html"><li class="menu-item-updates">Dev Blog</li></a>
+                <a href="overview.html"><li class="menu-item-getting-started">Overview</li></a>
                 <li class="menu-item-companies"></li>
                 <a href="#home-section"><li>Home</li></a>
                 <a href="#dashboard-section"><li>Dashboard</li></a>
@@ -71,6 +74,40 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium. Sed risus pretium quam vulputate. Nisi vitae suscipit tellus mauris a diam. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Mi sit amet mauris commodo. Elit at imperdiet dui accumsan sit. Malesuada proin libero nunc consequat interdum varius sit amet mattis. Odio ut sem nulla pharetra diam sit amet. Eget duis at tellus at urna condimentum mattis pellentesque. Maecenas ultricies mi eget mauris pharetra et ultrices. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Fames ac turpis egestas sed tempus urna et. Amet venenatis urna cursus eget nunc scelerisque. Et odio pellentesque diam volutpat.
                     Convallis tellus id interdum velit laoreet. Consequat semper viverra nam libero justo laoreet. Nulla posuere sollicitudin aliquam ultrices sagittis. Donec enim diam vulputate ut pharetra. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Turpis in eu mi bibendum neque egestas congue. Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Felis donec et odio pellentesque diam volutpat. Duis at consectetur lorem donec. Vel orci porta non pulvinar.</p>
                 <h3 id="journeys-section">Journeys</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium. Sed risus pretium quam vulputate. Nisi vitae suscipit tellus mauris a diam. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Mi sit amet mauris commodo. Elit at imperdiet dui accumsan sit. Malesuada proin libero nunc consequat interdum varius sit amet mattis. Odio ut sem nulla pharetra diam sit amet. Eget duis at tellus at urna condimentum mattis pellentesque. Maecenas ultricies mi eget mauris pharetra et ultrices. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Fames ac turpis egestas sed tempus urna et. Amet venenatis urna cursus eget nunc scelerisque. Et odio pellentesque diam volutpat.
+                    Convallis tellus id interdum velit laoreet. Consequat semper viverra nam libero justo laoreet. Nulla posuere sollicitudin aliquam ultrices sagittis. Donec enim diam vulputate ut pharetra. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Turpis in eu mi bibendum neque egestas congue. Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Felis donec et odio pellentesque diam volutpat. Duis at consectetur lorem donec. Vel orci porta non pulvinar.</p>
+                <table>
+                    <tr>
+                        <th>Journey Status</th>
+                        <th>Description</th>
+                        <th>Symbol</th>
+                    </tr>
+                    <tr>
+                        <td>Assigned</td>
+                        <td>Device has been assigned to the customer account but has not yet started tracking.</td>
+                        <td><img class="journey-status" src="img/status-assigned.png" alt="assigned-status-png"></td>
+                    </tr>
+                    <tr>
+                        <td>Tracking</td>
+                        <td>Device button has been pressed and is activitely tracking.</td>
+                        <td><img class="journey-status" src="img/status-tracking.png" alt="tracking-status-png"></td>
+                    </tr>
+                    <tr>
+                        <td>Returning</td>
+                        <td>Device button has been pressed and the device is no longer tracking. If the device battery is below 10% then the device will automatically stop tracking without the button being pressed.</td>
+                        <td><img class="journey-status" src="img/status-returning.png" alt="returning-status-png"></td>
+                    </tr>
+                    <tr>
+                        <td>Complete</td>
+                        <td>The device has been returned to an Operations Centre or has gone through a Consolidation point on the returns network</td>
+                        <td><img class="journey-status" src="img/status-complete.png" alt="complete-status-png"></td>
+                    </tr>
+                    <tr>
+                        <td>Lost</td>
+                        <td>The device has been with the customer for more than 90 days. The 90 day period starts from the date of delivery.</td>
+                        <td><img class="journey-status" src="img/status-lost.png" alt="lost-status-png"></td>
+                    </tr>
+                </table>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl pretium. Sed risus pretium quam vulputate. Nisi vitae suscipit tellus mauris a diam. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Mi sit amet mauris commodo. Elit at imperdiet dui accumsan sit. Malesuada proin libero nunc consequat interdum varius sit amet mattis. Odio ut sem nulla pharetra diam sit amet. Eget duis at tellus at urna condimentum mattis pellentesque. Maecenas ultricies mi eget mauris pharetra et ultrices. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Fames ac turpis egestas sed tempus urna et. Amet venenatis urna cursus eget nunc scelerisque. Et odio pellentesque diam volutpat.
                     Convallis tellus id interdum velit laoreet. Consequat semper viverra nam libero justo laoreet. Nulla posuere sollicitudin aliquam ultrices sagittis. Donec enim diam vulputate ut pharetra. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Turpis in eu mi bibendum neque egestas congue. Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Felis donec et odio pellentesque diam volutpat. Duis at consectetur lorem donec. Vel orci porta non pulvinar.</p>
                 <h3 id="companies-section">Companies</h3>
