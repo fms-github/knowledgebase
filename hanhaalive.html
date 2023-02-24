@@ -1,0 +1,1127 @@
+
+Hanhaa Live Web Users Guide
+Web App Knowledge Base
+
+
+Table of Contents
+1. Logging In	2
+2. Dealer View	3
+3. Navigation Pane	3
+4. Dashboard	4
+5. Maps	29
+6. Beacons	35
+7. Administration	59
+8. Alerts	85
+9. NEW FEATURE RELEASE NOTES	91
+10. BeMini	101
+
+Logging In
+The URL for the <a href="https://hanhaa.live">Hanhaa Live Web App</a>  is:
+https://hanhaa.live 
+
+The username is the user's email address.  The initial user is created by BeWhere support staff.  Upon creation of a new user, an automated email is sent from support@bewhere.com which has a link to the BeWhere Web Site and the user's password.  Please note the username email address is Case Sensitive.  
+<!-- insert screenshot of login page -->
+The first time logging in you will be prompted to only insert your new password.  You will then need to log in, your username is your email address.  BeWhere Web is available in English, French and Spanish.
+Compatible Browsers:
+Google Chrome
+Internet Explorer 
+Mozilla Firefox
+Safari
+**Available on Desktops and Mobile Devices
+Dealer View
+Right Click on a customer account and then left-click on Select Account to access a specific account.  
+
+Users with Dealer rights have the ability to create new BeWhere Accounts using the Add Accounts Feature.
+ 
+
+
+Navigation Pane
+The Default view is the BeWhere Dashboard. The navigation pane is used to toggle between the Dashboard View, Live Map View, Beacon Administration, Administration for Groups, Sites, Transmitters, Sites and users and user profile.  
+
+Dashboard
+The starting default page is the BeWhere Dashboard.  The dashboard displays a list of the beacons, a map and an overview of the beacon status (Battery Percentage, Count of Impacts, Temperature and Light Reading).  The historical data is retrieved in the Dashboard Tab.
+Select Realtime to view a list of the beacons
+
+The Beacons are listed and color-coded based on when they last reported.  
+The Dashboard Pane provides a quick pick date feature based on reporting times, a refresh/update data tool, including line graph, and also include a map.
+Quick View Dashboard Beacon Status and features:
+Green - Beacons Reported in the last 24 Hours
+Orange - Beacons Reported in the last 48 Hours
+Red - Beacons Reported more than 48 Hours
+Blue - Total amount of Sending Devices
+Auto Refresh  - Updates Beacon Status/ Refresh Data Button needs to be White for auto-refresh.  DEFAULT IS OFF
+Data  - Selected Beacon (For History), By Temperature, By Battery, By impact, By Light
+Map  - Used to include/remove Map View
+Save  Used to save the Desired Starting Map View.
+
+ 
+
+The Historical Data can be viewed in a line graph for Temperature, Battery, Impact or Light.  Historical Data can also be Mapped by clicking on the Map Feature Button 
+
+The Search tool has the following time selections: Today, Yesterday, Last 7 Days, Last 30 Days, This Month, Last Month, Custom Range.  Clicking on any of these History Presets will display the locational data on a map and is also available in tabular and Grid form.   Simply select the Graph Type “Selected beacon”, select the checkbox beside the Beacon ID and then the history time range.
+
+The Historical Data Points are plotted by default as a cluster. If there is more than one point at a location, the data points are grouped together as a cluster.
+
+The Plot GeoPoint feature will display one point per location.
+Motion START – Green
+UPDATE or IMPACT- Blue when realtime
+Update or Impact – Orange when Store/forward
+Motion STOP - RED
+
+
+
+The Plot GeoLine feature will connect each Data Point with a Line.
+
+Each column can be sorted by clicking on the column header and columns can also be added or removed.  
+The raw data can be copied to the Clipboard, Exported in CSV Format, exported to MS Excel, Exported to PDF and also sent to your printer.  
+
+Right Click on a device from the dashboard also has a quick data history feature:
+
+Insert the start date
+
+Insert the end date
+
+The CSV file with the raw historical data will be automatically downloaded to your computer 
+
+
+Dashboard Features:
+Add/Remove data columns
+Interactive Line Graph results based on searchable date range
+Toggle between Line Graph and Raw data
+Toggle Mapped data on/off
+View Events
+Schedule Reports
+
+Data Columns
+Data fields can be added and removed using the Show Columns tool to check/uncheck data columns.
+The default visible data columns are:
+Beacon Name, Timestamp, MAC ID, Sender, Event Type, Battery, Impacts, Temp, Light and Distance
+Additional columns can be displayed by clicking on the Show Columns tab and highlighting the additional fields
+The additionally available data columns are:
+Tags, Event Type (ID), RSSI, Sid Sender, latitude, Longitude, Barometric Pressure, Humidity, Impact Cycle, TID Event, TID Frame, TID HFrame, AUX 1, AUX 2, AUX 3, AUX 4, Temp OB, Light OB, Humidity OB, Barometric Pressure OB, Aux 1 OB, Aux 2 OB, Aux 3 OB, Altitude.
+Definitions of Default Data Columns:
+Beacon Name
+The assigned friendly name of a beacon.  Default is the MAC ID.
+Timestamp
+Date and time when the beacon last transmitted data.  YYYY-MM-DD- HH:MM:SS am/pm
+
+Received
+Date and time when the beacon data was received to BeWhere.  YYYY-MM-DD- HH:MM:SS am/pm. If the data was stored then the received data would be different from the Timestamp
+
+Sender
+The friendly name of the sender of beacon data (phone, tablet, gateway, modem).
+Event Type
+Describes the nature of the reporting event.
+UPDATE
+Beacon detects a value change of one of the following properties:  
+Battery Level  
+UPDATE REFRESH
+Beacon has NOT detected a value change.  
+Update record is generated ONLY if not UPDATE record has not been received in a 60 period.  
+EVERY Beacon packet is processed by BeWhere servers.  
+High-rate data forwarders such as BLE-Wi-Fi transmitters produce a large number of duplicate records.  
+OUT OF RANGE
+Last data transmission of a beacon prior to it going out of range of a sending device.  
+IMPACT
+Beacon detects a value change of one of the following properties:
+Impact value greater than beacon impact threshold setting.  
+TEMPERATURE IN BAND
+Beacon detects a value change of one of the following properties:
+Temperature value that is ENTERING range of the beacon temperature threshold settings.  
+TEMPERATURE OUT OF BAND
+Beacon detects a value change of one of the following properties:  
+Temperature value that is EXITING range of the beacon temperature threshold settings.  
+LIGHT IN BAND
+Beacon detects a value change of one of the following properties:  
+Light level that is ENTERING range of the beacon light threshold settings.  
+LIGHT OUT OF BAND
+Beacon detects a value change of one of the following properties:  
+Light level that is EXITING range of the beacon light threshold settings.  
+Battery
+The battery level is represented as the approximate state of the battery in percent. It is read as a value between 0-100.
+Battery Capacity
+The Percentage battery remaining 
+Impacts
+ The live impact counter represents a counter of how many times the x, y, or z axes have experienced accelerations exceeding a threshold (default at 2g). The counter is stored as a value from 0-255, and then rolling over back to zero.
+Temp
+ The temperature data shows the current temperature. Bluetooth beacons are accurate to 1 degree and cellular Beacons are accurate to .00 degree
+Light 
+The Blue Tooth beacon takes light readings at approximately 1-minute intervals. The live light data shows the current light readings between 0 and 255 Lumens. The beacon’s light sensor is pre-set with a full-scale range of 16000LUX. Measurement is in Lumens (the higher the Lumens count, the brighter the light).  
+NOTE: THE CELLULAR BEACON SHOWS THE CURRENT LIGHT READINGS BETWEEN 0 AND 999 LUX.
+Distance
+Approximate distance from sending device.  Note:  distance is not available for Geotab GO6/GO7 devices and is default at 0.  
+Definitions of Additional Data Columns:
+ID (MAC)
+Media Access Control Identifier of a beacon is a unique 12 Digit Identifier.
+
+TAG
+TAG identifier used to group beacons.
+Sender ID
+ID of the sending device. Gateway is the BLE ID, Modems is the IMEI, GO6/7 is the Serial, portable device is the Device ID.
+Event Type (ID)
+Numerical ID of the Event type.  i.e. 1= Update
+			For MIOT devices, we have following event Types:
+INITIAL -- First time active on the network, hard rebooted, remotely requested to reset 
+UPDATE -- Time based configuration only (Interval) or when stationary (Stationary Interval) 
+IMPACT -- Device configured for Motion Continues mode and Impact counter has exceed Movement threshold configuration within the Movement Interval check, otherwise it will wait until the Stationary Interval expires when no movement detected. 
+MOTION_STARTED -- Device configured for Motion Start/Stop mode and Impact counter has exceed Movement threshold configuration while device was already Idle or Stopped.
+MOTION_STOPPED -- Device configured for Motion Start/Stop mode and Impact counter hasn't exceed Movement threshold within the Idle Interval check. This means device was Idling hence STOPPED event generated.
+HEARTBEAT  --  Heartbeat event is only for BeWired Devices.  Heartbeat is the event when the ignition is off and the device is stationary.
+GPIO ON -- event is only for BeWired Devices.  GPIO ON  is the event when the ignition is on and the device is transmitting on the “ignition Interval”
+GPIO OFF  -- event is only for BeWired Devices.  GPIO OFF  is the last ignition event when the ignition was turned off.
+Frame - Frame Counter of a particular record
+RSSI  (Received Signal Strength Indicator). A measurement of the power present in a received radio signal.  With regards to the RSSI in the  Bluetooth beacons, this is converted to distance from sending device:
+Beacons 2ft from Sending Device - RSSI = -52 to -66 DISTANCE = 2.50 to .63 (8.2ft-2ft). 
+Beacons 35ft from Sending Device - RSSI = -69 to -89 DISTANCE = 35.44 to 3.55 (116ft-18.2ft). 
+Beacons 75ft from Sending Device - RSSI = -81 to -92 DISTANCE = 50.12 to 14.13 (164.4ft-46.9ft)
+Speed - Only available in the history.Speed is a property of GPS, record. We collect speed along with with Lat/Lon and It's sampled 10 times after first valid GPS fix is produced. 
+
+
+Cellular Modem Signal Strength  is measured in absolute dBm so that a lower number indicates a better signal.
+
+
+
+
+Temp OB
+TBD
+Light OB
+TBD
+Humidity
+Integrated Environmental Unit measures relative humidity (0% to 100%).  Humidity measurement accuracy is ±3% with a hysteresis of 2% or better, and the temperature reading accuracy is within 0.5°C. Hysteresis: ≤ 2 % relative humidity.  
+Humidity OB
+TBD
+Pressure
+Pressure range: 300 to 1100 hPa.  BME280 pressure measurement is very stable over temperature: The low-temperature coefficient of 1.5 Pa/K, translates into an altitude stability over temperature measure of 12.6 cm/K (5.0 inches/K).  Absolute temperature accuracy ±0.5°C at 25°C.  
+Pressure OB
+TBD
+Aux 1
+Additional Input to be determined.  
+Aux 1 OB
+TBD
+Aux 2
+Additional Input to be determined.  
+Aux 2 OB
+TBD
+Aux 3
+Additional Input to be determined.  
+Aux 3 OB
+TBD
+
+Altitude
+Last current Altitude reading of the beacon from sea level.  
+Latitude
+A measure of relative position north or south on the Earth's surface, measured in degrees from the equator, which has a latitude of 0°.  
+Longitude
+A measure of relative position east or west on the Earth's surface, measured in degrees from the equator, which has a longitude of 0°.  
+Max G-Force
+The maximum G-Force a device has reached.  This is a custom feature and only applicable to cellular beacons.  
+Address
+Displays the Address of the last record
+Location Site
+Displays the name of the Geozone
+
+Scheduled Reports:
+Watchdog: non-reporting devices longer than x hours 
+Snapshot: Last report schedule
+Outside Geozone: Devices outside Geozone longer than x hours
+From Dashboard select Schedule Reports:
+
+Select Add Scheduled Report:
+
+Name the Report
+Select the Report Type: 
+Snapshot
+History
+Watchdog
+Outside Geozone
+
+
+SNAPSHOT
+Select Conditions:
+	Battery = Less than 3.56
+	Dormant Days = More Than xx
+	last Reported in Hours
+
+
+
+	Select Fields to include in Scheduled Report
+
+
+HISTORY 
+Report to display historical data
+The Recurring Selection defines how much historical data to be included in the report:
+ 	 Daily is the previous 24 hours.
+ Weekly is the previous week, 
+ Monthly is the previous Month. 
+
+	
+WATCHDOG
+	Set the threshold in hours for a report of devices not transmitted
+
+	OUTSIDE GEOZONE
+ If Out of Geozone also select the Threshold in hours
+
+
+Select Timezone
+Select Daily, Weekly or Monthly
+Select the start time for the report to be sent
+Ability to Select Device Filter either by Tag or by Group
+Insert Email Address separated by comma
+
+
+
+
+
+
+Here’s a couple of screenshots to show you some of the reporting From BB:
+ 
+This one shows the details on a trailer usage report that runs daily showing trailers that have been dormant for > 5 days:
+
+Here’s another designed to capture trailers outside of Geozones for more than 48 hours:
+
+ Here’s what it looks like when you’re setting up the Geozone – note you can setup ‘Zone IN/OUT’ alerts by email if that’s desired:
+
+
+
+
+
+
+With Geozone(s) setup and you select ‘Capture Stops’ (in above screen grab),  you can get reporting like this.    You can drill down on a specific asset/trailer by typing the ‘Name’ (eg 179241) in the Search bar
+
+
+
+
+
+
+
+
+
+
+
+
+
+Below, the first grab shows the ‘Report Types’ available in Scheduled Reports :
+Snapshot (with conditions, like battery lvl, dormant days, last reported hours….)
+History
+Watch Dog
+Outside Geozone
+ 
+Reports can be scheduled daily, weekly, monthly for a specific time.  
+You can filter the report by devices with certain Tags (defined by users) or by Groups if Groups are setup. 
+You can have reports generated for specific conditions (eg battery, dormant days, last reported hours)
+Persons (emails) receiving the report don’t necessarily have to be users of the system.
+
+
+
+
+
+
+
+
+**NOTE:
+If you require the Dormant Days Condition and Dormant Days data field, You will need to activate the Dormant Days Rule under “Rules” in order to begin processing the dormant days events.  Heres an example of the scheduled report:
+
+
+Create the Dormant Days Rule:
+
+
+
+Maps
+By default, the map is centered on all beacons. Clicking on a beacon will zoom in and center onto a beacon. Map view can be zoomed in or out using the + or – located in the bottom right corner of the map.  
+The Once the desired Map View is reached, the view can be saved by clicking on the Disk Icon
+
+Map features located in the top left corner include:
+Open Street/Satellite view
+View Beacons
+View Sites
+View Transmitters
+View Modems
+Search Box for Beacon or Transmitter
+
+Maps -View Beacons
+Clicking on a beacon icon will display the snapshot data and includes:
+ID, Beacon Name, sending device, Date and Time of last transmission, Battery Level, Distance from sending device, Impact Reading, Temperature, Light reading, Humidity and Pressure if applicable.
+The beacon name can be modified by editing the beacon in the device info tab.  Beacons will ship with the MAC address representing the name.  Beacon names can be changed at any time to a more friendlier identification name of the asset.
+Icon Colors
+The outer edges of the icons will match the last transmit status in the dashboard:
+Green = Reported within 24 hours     Orange =  24-48 hours     Red - More than 48 hours
+                                                                                
+The color inside the icon:
+Red - Last fix device had an Invalid GPS Fix
+White -  Last fix device had a valid GPS Fix
+Blue - Location is GPS Assist (Closest Cell Tower device last transmitted from)
+
+
+
+
+Cellular beacons include the Location Latitude and Longitude Coordinates as well as the Address when a device is clicked on the map through the Pop-Up.  The Tower Feature will display the closest tower. Clicking on the Tower Distance Feature will display the distance between the closest Tower and the device.
+Clicking on the Latitude and longitude coordinates will open a new tab window in google maps.
+
+The Map Tab can also run device history.
+1. Select Live History
+2. Open the vehicle pane
+3. Select a device
+4. Select Map or Grid (Map by Default)
+Note:  This feature is interactive which allows you to select additional devices to display the historical data visually on the map.
+Alerts
+The Alerts can be configured per beacon Please note: the email recipient is the username of who is logged into BeWhere Web.  
+In Range and/or Out of Range – An Email Alert will be activated whenever a beacon goes in or out of range of a transmitter.  This feature is only available if a beacon data is being transmitted through a Geotab GO6/7 or Android Device. IOS Device and BLE/WIFI Gateways are not compatible.
+Battery Level – An Email Alert will be activated by checking the LO indicator and inserting a percentage.  The +/- indicator is available to configure an Email Alert for a change in battery level percentage.  Reset to default is 25%.
+Temperature – An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a temperature in Celsius.  The +/- indicator is available to configure an Email Alert for a change in temperature.  Reset to default is LO 5 and HI 28.  
+Humidity – Only if Applicable - An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a Humidity percentage.  The +/- indicator is available to configure an Email Alert for a change in humidity.  Reset to default is LO 0 and HI 90.  
+Impact Count – An Email Alert will be activated by checking the HI indicator and inserting an actual impact count.  The +/- indicator is available to configure an Email Alert for an increment change.  Reset to default is HI 255 (Highest impact count before being reset to 0).  
+Light Level - An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a Lumen count.  The +/- indicator is available to configure an Email Alert for a change in Lumen.  Reset to default is LO 5 and HI 8.  
+Barometric Pressure – Only if Applicable - An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a Kilopascal Pressure Unit (kPa).  The +/- indicator is available to configure an Email Alert for a change in kPa.  Reset to default is LO 10 and HI 101.5.  
+
+
+
+
+
+
+
+
+
+
+
+
+Groups
+The Groups Tab displays which groups a beacon is assigned to and also has the ability to add a beacon to a group
+Maps – View Sites
+Sites can be selected and viewed on the map.  They also may be edited by clicking on the edit feature.
+
+Maps – View Transmitters
+Transmitters can be selected and viewed on the map.  They also may be edited by clicking on the edit feature.  The location of the transmitter can also be modified by left mouse clicking on the transmitter and moving the position.  You can also use the search bar to find a specific transmitter.  Simply type in the transmitter name in the Location Search Box in the top left corner of the map.
+
+Beacons
+The beacons Tab displays a list of all beacons.  The beacons are searchable and can also be exported.  Right click to edit the beacon which also includes Alert configuration.
+
+
+The beacon list can also be exported to CSV, Excel or PDF.
+
+Multiple beacons can be imported by using the Import feature.  The import beacons feature allows bulk imports using a CSV File.  Below is the import format for Blue Tooth Beacons:  The import templates are found in the Administration menu
+
+Beacons can also be grouped by “Tagging” beacons.  Edit a beacon, add a tag name and hit Enter.  
+
+The Edit Beacon Feature for Cellular Beacons will display a different Edit Feature which contains the Device Information with Tags and also a Cellular Configuration Feature
+
+The Cellular Configuration Feature allows for a configuration change of type and Timed interval.
+NOTE: Devices are shipped with a default configuration setting of Timed Report Interval once every 24 hours.  When a configuration setting is changed, the device will accept the configuration change upon the next timed interval report (i.e., if its set to report every 24 hours and its changed to 5 minutes, the device will accept the change at the next 24-hour timed report).  
+BATTERY LIFE IS DEPENDENT ON THE CONFIGURATION FREQUENCY - TYPICAL BATTERY LIFE FOR AA 3.6V BATTERIES IS 3000 TO 4000 RECORDS. THE BATTERY COLUMN DATA FIELD WILL DISPLAY THE BATTERY VOLTAGE, BELOW 3.55V IS EXTREMELY LOW.
+The available configuration options are:
+SKUs Configuration
+BeTen
+Time schedule
+Motion (Movement)
+
+BeSol
+-Time based
+-Motion (Trip)
+
+BeWired
+-Time based with Ignition
+-Motion Trip with Ignition
+-Sensor Integration temp probe
+
+BeMini
+-Time based
+-Motion (Trip)
+-Leash Mode
+
+
+BeTen
+Time schedule
+Motion (Movement)
+
+Timer Based:
+
+
+
+
+
+Interval Type:
+5 Minutes
+10 Minutes
+15 Minutes
+30 Minutes
+1 Minutes
+2 Minutes
+6 Minutes
+12 Minutes
+24 Minutes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Motion Movement (Continuous:)
+Motion based configuration is combined with a Timer based while the device is stationary.
+Interval: The timed reporting configuration for while the device is in motion (i.e.  One report every 5 minutes while the device is in motion).
+
+
+
+Movement Counter:  The movement sensitivity of the device while in motion.  
+THE MOVEMENT COUNTER IS A MOTION SETTING TO DETERMINE A MOVEMENT COUNT OF 1 IS .3 G IMPACT WITHIN 32 MILLISECONDS.  **IE. IF INTERVAL IS SET TO 5 MINUTES AND MOVEMENT COUNTER IS SET TO 2, THE DEVICE WILL NEED TO DETECT 2 .3G IMPACTS WITHIN 5 MINUTES FOR THE DEVICE TO TRANSMIT DATA ON MOTION.
+Stationary Interval: Timed report while the device is not in motion.
+
+BeSol
+-Time based
+-Motion (Trip) - Which includes a Trip Start and Trip Stop Record
+
+
+Motion Trip  (Start/Stop):
+NOTE:  Devices with Firmware Version 1.4.2 + as of December 1st 2018 have an additional Motion Based Configuration feature:  For Motion Based Configuration, there are 2 types of settings: Motion Start-Stop and Motion Continuous:
+For Motion Start-Stop, the device will only send a report when the device starts and then when it stops.  For example, the idle interval setting set to 15 minutes means the device will report 15 minutes once it stops moving. The movement threshold is the motion sensitivity of the device.  A setting of 10 means it will need to detect or not detect a minor motion 10 times within 15 minutes.  The stationary interval set to 12 hours would mean the device will send a record every 12 hours when not moving.  
+
+
+
+
+
+For Motion Continuous, the device will send data every 15 minutes when in motion.
+NOTE 1:  Existing firmware version must be 1.6.15 and above to be able to set Motion Configuration. 
+NOTE 2: Motion Configuration should only be sent if the device battery level is 3.8 volts or higher to prevent the battery from draining during the configuration.
+
+The device has an accelerometer on board that it uses to measure g forces.  A movement threshold is defined by us as a certain measured g force over time.  For the device to break the movement threshold you set (x) it would have to go over the defined g force/time setting x times
+Each x min interval the device will go into a listening state - if it senses the motion threshold has been exceeded, it will increment a counter.  If the counter is greater than x by end of x min it will wake up and send a report.  If it does not sense motion counter > x it will continue to listen for another x minutes (keeping the value of the counter).
+This listening will continue every x minutes.  There is a secondary timer that is the stationary timer.  If there is no motion (Movement threshold > x) in x min it will expire and it will force the device to wake up and send a report.  This secondary timer will reset every time you send a motion report.
+Motion with Sensor Configuration
+
+
+
+
+
+
+Add start time for timer configuration:
+For timer configuration, the user can set a start time, please see the picture below. Please note: In order to set start time, the interval should be equal and greater than 1 hour and can be divided by 24 hours
+
+
+For firmware 1.6.14 above, motion start/stop has been changed to 'Motion', by default enabling "continuous motion".
+
+BeWired
+-Time based with Ignition
+-Motion Trip with Ignition
+-Sensor Integration temp probe
+
+The Wired devices have a configurable Initial interval feature.  This feature is to set how frequent the device will transmit when the ignition is detected.
+
+
+
+
+
+
+
+
+
+
+
+
+Disable GPS Feature
+When devices are going into storage and not being used, recommended configuration is Timer Based with 24 hour interval and Disable GPS selected.  
+
+
+
+
+
+
+
+
+
+
+The Temperature Sensor will need to be selected if the temperature probe is used:
+
+
+
+
+
+
+
+
+
+
+BeMini
+-Time based
+-Motion (Trip)
+-Leash Mode
+The BeMini has a Leashed Based Feature.  By adding the WiFi BSSIDs, the mini will not use GPS allowing the device to preserve battery Life.  GPS Location will be used from the Wifi Location.  This will determine the Wifi Geofence.  When the device detects that it is within the Wifi Geofence, the onleash interval will activate and the device will transmit only every 24 hours as per the on Leash interval.  Please note to endure the BSSID/MAC ID is added as follows: ##:##:##:##:##:##
+
+
+
+Leash Based Configuration Definitions:
+
+GPS waiting for fix (Max wait time) - The maximum amount of time a device will wait for valid gps.
+ After GPS-Fix Improvement (Max wait time) - Once device finds a fix, maximum waiting time device will stay on to increase GPS accuracy.
+ OnLeash interval - Reporting time when in WiFi range.
+ OffLeash interval(sec) - Reporting time when out of WiFi range.  Time Based feature.  (note: device will continue to transmit regardless if movement/no movement until device enters back into WiFi).
+ Scan interval stationary(sec) - Amount of time the device scans within WiFi range when not in motion to confirm the device is still in a WiFi range.  (Internal Feature)
+ Motion thresh -  Movement threshold when device is in motion.
+ WiFi Geofence - BSSID needs to be added for each device.  Format is:  ##:##:##:##:##:##
+
+
+
+
+
+
+Remote Commands:
+Hard reset: manufacture reset, all settings..
+Soft reset: normal soft reset and internal registers.
+Hibernate: Used to put the device to deep-sleep mode to preserve battery life with no reporting updates. The device will wake up and start transmitting again once the device detects light.
+
+
+
+Data Usage:
+1 Transmission  = 150 Bytes
+4  Pings x 150 Bytes = 650 Bytes x 30 days = 18000 Bytes -> 17 KBytes ~ 0.2MB
+8 Pings x 150 Bytes = 1200 Bytes x 30 days = 36000 Bytes -> 35 KBytes ~ 0.35MB
+12 Pings x 150 Bytes = 1800 Bytes x 30 days = 54000 Bytes -> 52 KBytes ~ 0.6MB 
+24 Pings x 150 Bytes = 3600 Bytes x 30 days = 108000 Bytes -> 108 KBytes ~ 1.08MB 
+
+
+Configuring Multiple Beacons
+
+Select multiple devices  from the Beacons Tab
+
+
+
+
+Right click and select Edit.  The selected devices will now be visible.  Tags can be created for the multiple devices selected and also the configuration can be configured for the selected devices.
+
+
+
+Import Templates are available from the Administration menu.
+
+Multiple devices can be configured at the same time using the Import tool. Select Add and then select the csv file to import from. Use template Beacon_Import_Template_Config.csv in order to update batch configuration.
+
+
+
+
+
+The Data Column GPS FIX will indicate the GPS Record Type: 
+Valid 1 - The device transmitted with a valid GPS record
+Valid 2 - The device did not attempt to get a GPS fix as the motion of device indicated the device did not move – its assuming the previous valid GPS position.
+Invalid 3 – The device attempted to get a GPS record but could not – The location will display the last position that was valid or the Cell tower location using the GPS Assist Feature.  This is because the device could be blocked from the sky or the device could be indoors.
+Valid 4 – The device is using the closest WiFi Location (Note: Only BeMini) **Wi-Fi 40 meters is the standard consumer grade router for accuracy. we have seen other routers we pickup that go a farther range like 80 or 120 meters but those are exemptions and rare.  
+
+SKIP GPS FEATURE ADDED JANUARY 2020
+Normally the device will fetch GPS info every time after the device wakes up. If user selects "Skip GPS" option, then the device won't fetch GPS info after wakes up. The purpose to do so is to save power and time(Firmware fetch GPS will consumer more power and takes up to 3 minutes). This is a good option for the devices in door or do not move.
+
+
+
+
+
+
+
+
+
+Note:  Cellular device must have valid GPS and a clear view of the sky for accurate location reporting.  If a device does not have a valid GPS, click on the Map Option located in the top right corner of the map and select Network to view the closest Cell Tower that is communicating with the device.
+
+Cellular beacons will also display the Firmware Version from the beacon page.  Please note that this feature is not applicable to the Blue Tooth Beacon.
+
+
+From the Dashboard, Show Column “Tags” and then sort the Tags column to see the tagged beacons grouped together.
+
+
+Administration
+Groups, Rules, Sites & Geozones, Users, Installer feature, and Audits are primarily used for MIOT Devices.  Gateway Administrative Features for Mobile Groups, Transmitters, and Modems are used for Bluetooth-only beacons.
+
+
+
+
+RESOURCES
+
+
+The resources link is where you will find a copy of this User Guide, the Onboarding Guide, FAQ and API Reference.  The Onboarding Guide must be consulted prior to installation in order to achieve the optimal location for the best performance from the BeWhere Devices.
+
+
+
+Groups – MIOT
+The Groups feature allows you to Group devices together by asset type and then assign users to the specific Groups so that when the users log in, they only see the devices assigned to their Group.
+Create a New Group. Select Group from Administration.
+
+
+
+Add a new Group.
+
+
+
+
+Name the Group appropriately then click on Save.
+
+
+Right click on the new group and select Edit.
+
+
+
+
+From the Beacons Tab add devices to the Group and Save.
+
+
+From the Users Tab Select the users that will have access to the devices and assigned to the group and select Save.
+
+
+Optional, from the Basic Info Tab, Select the Choose parent Group if there’s a group created that has all the devices assigned to it. 
+
+Rules – MIOT
+Create a Rule and then edit the rule to select the conditions of the sensors. Notifications can be activated and users selected to receive the email alerts.
+
+The Legacy Alert Rule is used to send email alerts based on selected thresholds.  Note:  Selecting All beacons will include any additional devices that are added to the account on future orders
+
+
+
+Additional rule types such as Start/Stop and Trip are used to activate Start and stop and/or Trip Events.  
+
+
+The results of activating these Rule Events are found under Dashboard/Events
+
+
+The Dormant Rule is used to activate the Dormant feature in the Schedule Reports.
+
+
+
+
+
+
+Sites and Geozones
+The Geozone feature is only functional for MIOT Devices and Not Bluetooth beacons. 
+Here are the steps to create a Geozone:
+
+Step 1.  Add a new site 
+
+
+Step 2.  Name the Geofence
+Step 3.  
+-Select Capture Stops (Optional if you would like to see the In/Out notifications in the Dashboard Location Column and Dashboard Events Report).
+-Select GPS Assisted (Optional if you would like to include the Cell Tower location as a stop).
+-Select Visible on Map (Optional if you would like to have the Geozone visible on the map).
+Step 4. Insert address or Latitude and Longitude coordinates in the Address Search Tool located top left or navigate to the location by dragging the map using the left mouse click and using the + (Zoom in) and – (Zoom Out) Feature.
+Step 5.  Draw the geofence using the Polygon, square or circle drawing feature.  
+Step 6.  Click Save.
+
+
+Email notifications can be created for Zone In and/or Zone out events from the Edit Sites and Geozone page.  Email notifications can also be configured for Bluetooth Beacon transmitter zones.
+
+
+The next scheduled report will now display the name of the Geozone in the Geozone Column (GeoZone Location) and indicate if the device was in or out of the Geozone
+
+
+
+
+The Dashboard Events Report will also display the devices, timestamp, In/Out events and address:
+
+
+There are several types of Events Report
+Dwell and GeoZone – Displays both In/Out and all Stop Begin Stop End Events.
+Dwell – Displays only Stop Begin and Stop End Events.
+Geozone – Displays only In/Out of Geozone Events
+Trips – Displays the Trip Start and Trip End Events
+
+
+
+Note: To Activate the Start Stop or Trip Event Report, the Start Stop or Trip Rule needs to be created:
+
+Add a new Rule and select the Start Stop Rule.
+
+Default Condition is 200 Meters
+
+Note:  Requirement for Trips Event / Report Feature
+Recommended for BeSol devices with firmware version 1.6.15+ 
+Configuration: Motion (Start-Continuous-Stop) Idle: 15min Interval:12/24hrs
+
+
+In order to enable Trip Event, feature a Trip Rule needs to be enabled (at least one for each account)
+
+Trip Rule can be configured for “All beacons” assigned to the account or for specific Beacons if not all beacons are applicable. More features will be added to this feature to simplify management in the upcoming sprints.
+
+
+
+
+Trip feature consists of two events: Trip Start linked to device Motion Start message and Trip End linked to device Motion Stop message, however there is a slight difference in terms of how location of the event is calculated. 
+
+
+
+Once the Trip Event data has been filtered out, it can be downloaded in the Trip Report view as per format below
+
+Users
+The new users feature allows you to add additional users.  Username is the users email address.  Please use lower case.  For the role please select administrator.  The appropriate Time Zone needs to be selected or the default of Eastern Daylight Time will be used.  We also recommend to select Reset Password to On so that upon the first login the user will be prompted to change the password.   You also have the ability to select metric or imperial when creating a new user.  Once Save is clicked, an automated email is generated from Support@Bewhere.com to the new user.  The automated email has a URL link to the BeWhere Web App and also has the password for the new user.  
+
+
+Users tab 
+Please ensure Reset Password is checked.  This will allow the user to create their own user-friendly password upon login.  
+The default user setting is Metric Off (Imperial).  For beacon data to be in Metric, please check Metric.  
+
+Change Role
+The default user role is USER which has limited rights.  Users with Administrative rights have the ability to change the user privileges.  
+After a new user is created, return to edit user and click on CHANGE ROLE.  
+Select a new user Role: NO ACCESS, USER, MANAGER, SUPERVISOR, INTEGRATOR, ADMINISTRATOR.  
+
+Definitions of Roles:
+NO ACCESS:
+Not able to log in - Temporary suspended
+USER:
+	Beacons - View Only
+Groups - View Only
+GeoZOnes - View Only
+Sites - View Only
+Transmitters - View Only
+Modems - View Only
+History – Unlimited access
+MANAGER:
+Beacons - View Only
+Groups - Limited Access -Can add/remove beacons from groups but not create/delete groups
+Sites - Limited Access -Can add/remove Transmitters to sites but not create/delete sites
+GeoZones - Edit and Delete but not create new zones
+Transmitters - View Only
+Modems - View Only
+Users - Change Time zone, Reset Password, change Metric/Imperial
+History – Unlimited access
+SUPERVISOR:
+Beacons - View Only
+Groups - Can add/remove beacons from groups but not create/delete groups
+Sites - Full Access
+Geozones - Create, edit and delete Zones
+Transmitters - Full Access
+Modems - Full Access
+Users - Full Access
+History – Unlimited access
+INTEGRATOR:
+Full Access to every feature except to users – create/change
+Access to the API Integration
+ADMINISTRATOR:
+Full Access to every feature
+
+INSTALLER
+The Installer Feature is used to add devices into an account when they are installed.   Devices can be added manually or by scanning the QR or Bar Code.
+
+
+AUDIT
+The Audit Feature is a report displaying the MIOT Device configuration status and history.
+
+
+
+Mobile Groups - Bluetooth
+This section relates to the Mobile devices (Android and IOS).  The field required is the name of the person or individual assigned to the phone.  
+Select Groups from the Administration Tab.  
+Right Click to edit existing groups  
+Click on Add Groups to create a new group
+
+Create a unique Group Name
+Select INSTALL for the Group Type
+Click Save.
+
+
+Once the new Group is created, beacons will need to be added to the group.  Simply edit the new group and s elect the beacon tab.
+
+The BeWhere System will create a unique Install Key for the user to be able to install the BeWhere Mobile App.  The Install key is found on the group list or editing the new group.  
+
+Group Types:
+Install – To Generate an Install Code for a mobile device.  
+Shell – Random group/fleet of beacons required for group email alerts (Not applicable to any device).  
+Site – Location based group of beacons assigned to particular geographic location.  
+
+Once the APK has been downloaded the Install Key will disappear from the group’s page.  This allows the administrator to figure out who still has to download the APK.  
+
+TRANSMITTERS
+Transmitters and Sites are used for setting up Bluetooth/Wi-Fi Gateways.  Please refer to the BeWhere BLE WIFI User Guide for additional details.  
+
+
+Enter the BLE MAC ID (Note:  The Device has two MAC IDs, please ensure you enter the BLE MAC ID and Not the WIFI MAC ID.  
+Add Location Name  
+Add Latitude *See Instructions below for finding Latitude  
+Add Longitude *See Instructions below for finding Longitude  
+Click on Save
+
+NOTE: There are several ways to find the Latitude and Longitude of a location: 
+http://www.latlong.net/ Simply type in your address and city to get the Latitude and Longitude.  
+If you have a Beacon reporting to the BeWhere Web Site, click on Maps, Show Columns, and display the latitude and longitude columns.   
+There are several Apps available that will provide you with a latitude and longitude of your location such as the GPS Black Box App.  
+*You may wish to record this info as it may be required again for multiple Transmitters.  
+
+Click on the Sites Tab to add your transmitter Site (Note: this is required when you have multiple Transmitters). 
+Click on New  
+Add Site Name  
+Add a Description for the new site  
+Select the Time Zone  
+Add notes for the location of the site  
+Add the Latitude *Copy from Transmitter Setup  
+Add the Longitude *Copy from Transmitter Setup  
+Click on Save  
+Click on the Sites Tab again  
+Click on Edit  
+Click on Add Transmitter  
+
+NOTE:  The location of the beacon on the map is dependent on the location of the sending device (Location of Android/IOS device or Latitude and Longitude of Transmitter).  
+Click on the Transmitter at this site  
+Once completed, your new Transmitter Site is now created and is visible as a new transmitter. 
+**Repeat all the previous steps to add additional Transmitters and Site Locations.  
+
+MODEMS
+You can add Modems by inputting the IMEI number as an ID under the modem tab. The maps tab has a Sender column which is the modem that’s sending the data.  
+
+
+Multiple Modems can be imported using the Import Modems Feature 
+The file must be in CSV Format.
+Below are the rules for each modem type:
+GO6 must start with G6 followed by 10 alphanumeric characters
+GO7 must start with G7 followed by 10 alphanumeric characters
+GO8 must start with G8 followed by 10 alphanumeric characters
+Cypress is 14 or 15 numbers
+Below is an example of the template:
+
+
+ Alerts
+Alerts are configurable individually, per user.  To access the Alerts feature, click on Administration and then Rules.  
+
+
+Select Add Groups to create a new rule:
+
+
+
+
+
+
+
+Add a name for the Rule, Select Legacy Rule Type and save the rule:
+
+
+
+Right Click on the new Rule and select Edit:
+
+
+
+
+Edit the rule by selecting a condition, turn notifications on and add user to receive the email alert.The user must be an active user in the BeWhere Account.
+
+
+From the Beacons tab, select the beacons to be added to the rule:
+
+
+
+
+
+
+
+
+
+
+
+From the Beacons tab you can select all beacons to be added.  As more devices are added to your account, the new devices will automatically be added to the Alert.  Beacons can also be added to the alert using the existing Tag Names
+
+
+
+
+
+
+
+
+
+
+
+Alert Definitions:
+
+In Range and/or Out of Range – An Email Alert will be activated whenever a beacon goes in or out of range of a transmitter.  This feature is only available if a beacon data is being transmitted through a Geotab GO6/7 or an Android device. 
+Battery Level – An Email Alert will be activated by checking the LO indicator and inserting a percentage.  The +/- indicator is available to configure an Email Alert for a change in battery level percentage.  Reset to default is 25%.
+Temperature – An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a temperature in Celsius.  The +/- indicator is available to configure an Email Alert for a change in temperature.  Reset to default is LO 5 and HI 28.  
+Humidity – Only if Applicable - An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a Humidity percentage.  The +/- indicator is available to configure an Email Alert for a change in humidity.  Reset to default is LO 0 and HI 90.  
+Impact Count – An Email Alert will be activated by checking the HI indicator and inserting an actual impact count.  The +/- indicator is available to configure an Email Alert for an increment change.  Reset to default is HI 255 (Highest impact count before being reset to 0).  
+Light Level - An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a Lumen count.  The +/- indicator is available to configure an Email Alert for a change in Lumen.  Reset to default is LO 5 and HI 8.  
+Barometric Pressure – Only if Applicable - An Email Alert will be activated by checking either the Lo indicator and/or HI and inserting a Kilopascal Pressure Unit (kPa).  The +/- indicator is available to configure an Email Alert for a change in kPa.  Reset to default is LO 10 and HI 101.5.  
+
+Group Alerts
+Group Alerts are similar to user alerts although the beacons within a group are all configured simultaneously and email addresses within an account can be assigned to the group alerts.  The group alerts are accessible through Administration/Groups and then edit Group.  Click on Administration, select Groups and then right-click on a Group to edit the group.  The Alert can now be configured for a group.  
+
+NEW FEATURE RELEASE NOTES
+1.1 Beacons 
+The Beacons view displays devices in your database and allows you to add new devices or to modify the settings of existing ones.
+What is the end-of-life voltage level when devices stop working?
+
+
+BeTen (2AA non-rechargeable battery) 
+Voltage level is affected by temperature, however, in room temperature it works in this range of 3.65 to 3.5. If the temperature is low and below 0 the voltage range will be lower. This is how lithium batteries operate.
+BeSol (3000 mAh rechargeable LiPo)
+Voltage range 4.2v - 3.5V which is the cutoff for the device to be active. 
+BeMini - Battery is drained at 3.35v
+
+
+What happens when a device can’t find a network? How often does it retry? 
+
+If a device fails to connect it will save data in the buffer and go to sleep and will try again the next schedule (depending on configuration)
+
+Adding a device
+
+Importing Beacons
+Multiple devices can be imported at the same time using the Import tool. Select Add and then select the CSV file to import from.
+
+Note: ID, Name,Beacon Type are mandatory fields
+
+Importing TAGs
+Multiple devices can be tagged at the same time using the Import tool. Select Add and then select the CSV file to import from. Use template Beacon_Import_Template_Tags.csv in order to update tags, see
+example format below
+Action,ID,Name,Beacon Type,Tag Action,Tags
+INSERTORUPDATE,3575910800802341,HoP-3575910800802341,LTE-M,APPEND,Station
+
+
+Importing Configuration
+Multiple devices can be configured at the same time using the Import tool. Select Add and then select the CSV file to import from. Use template Beacon_Import_Template_Config.csv in order to update configuration, see example format below
+Action,ID,Name,Beacon Type,Configuration Type,Interval,Movement Counter,Stationary Interval
+INSERTORUPDATE,1000000000000000,HoP-1000000000000000,LTE-M,MOTION_START_STOP,900,3,86400
+INSERTORUPDATE,1000000000000001,HoP-1000000000000001,LTE-M,TIMER,7200,,
+INSERTORUPDATE,1000000000000002,HoP-1000000000000002,LTE-M,MOTION,900,3,86400
+
+Action definition
+INSERT:  New record to be inserted in the database if device doesn’t exist  
+INSERTORUPDATE: When the device exists but the record needs to be updated i.e. change configuration or other attributes 
+APPEND: Will append the content, in addition, it existing one i.e. add additional tags 
+OVERWRITE: Will remove all previous data and overwrite with new content i.e. remove comments, tags and replace with new values 
+
+1.1.2 Device Configuration
+1.1.2	Time 
+Recommend configuration 
+Battery devices when once or a few times updates a day are required. Typically for equipment that are stationary most of the time and occasionally move.
+1.1.2	Motion Continuous 
+Recommend configuration 
+Solar devices when high-resolution data points are required while equipment is constantly in motion 
+
+Example configuration 
+
+As the equipment is moving while the device is sleeping, per active/inactive thresholds, device will detect movement and increment impact counter without connecting to the network. Per Motion Interval device will wake up and check if the impact counter is >= movement threshold. If that’s the case device will record an Impact event will try to update GPS, connect to the network, and sends Impact event. Otherwise the device will wake per Stationary Interval and record and send Update event. 
+
+Updates: 0 value means no event generated hence no update to server, 3 represent Impact, 1 represent stationary Update. 
+
+1.1.3	Motion Start-Stop 
+Recommend configuration 
+Battery and/or Solar devices when initial start and last stop is required for equipment that are constantly in motion, but their trip is not important, recommended 
+
+A Motion Start is recorded when the device starts moving, impact counter is >=movement threshold. A stop is recorded when the device hasn’t recorded any impact for Idle Interval.
+
+
+
+Updates: 0 value means no updates, 4/5 represent Motion Start / Motion Stop, 1 represent stationary Update. 
+
+1.1.4	Motion Start-Impact-Stop
+Recommend configuration starting with new firmware 1.6.15
+Battery and/or Solar devices when initial start and last stop is required for equipment that is constantly in motion, but their trip is not important, recommended 
+A Motion Start (start) is recorded when the device starts moving, impact counter is >=movement threshold. A Motion Stop (stop) is recorded when the device hasn’t recorded any impact during Idle Interval. An Impact (motion) is recorded when any impact is recorded during Idle Interval. 
+
+
+1.1.5	BLE Gateway configuration
+BLE gateway operates independently of solar devices. It has its own configuration in terms of wakeup, scan and storing discovered BLE data. 
+Wakeup Interval: It determines the interval (in seconds) how often the device will wake up for scanning BLE Tag/Sensors in proximity. Recommended to be set to multiple of 30seconds i.e. 60, 90 or 120 etc.…. In the example below device will wake up every 2 mins to scan for BLE sensors.
+Scan Duration: Duration for which device will scan for BLE device in proximity. Recommended 15s and higher but not too high as it has implications with battery consumption.  In the example below 
+Scan Window: Not applicable, for admins only if required.
+Scan Method: Depending on use cases, the configuration can be set as follows: 
+Store/Forward: 0 -Every time BLE wakes up it will store scanned BLE records, from assigned Beacons, in memory to send when a cellular update happens. Scan duration may depend on how many beacons are assigned to ensure the duration is enough to scan all beacons in proximity. 
+Last Scan: 1 – It stores the last scan data, from assigned Beacons, and sends with other cellular updates. Its recommended if beacons are used for proximity or onboard presence only and sensor data is not required. 
+
+All beacons: 2 – Similar to Last Scan but does not require BLE Tag assignment. In this configuration, Scan duration might need to be set long enough to scan for a large number of beacons if necessary. This configuration consumes lots of data and power/battery consumption hence needs to be used with caution. 
+
+
+
+Note: 
+It’s important to know that BLE data will be transmitted only when the device has an event to transmit i.e. in this example BLE data will update only when devices moves every 15 mins or every 24 hrs. when stationary. 
+BeSol and Beten Device has the capacity to store 24 records on board (store and forward) when the device is out of coverage  and then the records will be sent when in coverage
+Bemini has the capacity to store 30 records with the next version (Q4 2022) increased to 100.
+
+
+
+
+1.1.6	BeWired Wiring Schematic with Temperature Probe
+
+
+
+Wiring for Temperature Sensor:
+
+
+
+Note: 
+
+Event Type for reporting on Ignition:
+GPIO ON - First Event record for device transmitting on Ignition
+GPIO OFF - Last Event record for device transmitting on Ignition	
+
+Aux 2 Input:
+1 is on ignition reporting
+0 is standard reporting
+
+1.1.6	BeWired Wiring Schematic with Multiple Temperature Probes
+
+Wiring for Refer:
+
+
+
+NOTE: For Water Sensor Probe
+Data Field: Aux1
+1 if water is present
+0 is no water
+
+Sensor IO will trigger on change depending on water presence.
+Tag must be fn_WaterDetector
+
+1.1.7	BeWired Temperature data in Geotab
+Temperature data is available in Geotab Engine Measurements found under Refer temperature zone 1-4 in chronological order.
+
+
+1.1.8  INSTALLATION 
+BeWhere devices are shipped with a default configuration of 1 report every 24 hours to preserve battery life.  Once the devices are ready to be installed you can change the configuration or email support@bewhere.com and we will change it for you.
+
+Please ensure you install the devices with a clear view of the sky for best results.  Solar powered devices need to be installed on the asset so it can get direct sunlight. 
+
+The GPS Sensor is located at the top of the device near the light sensor.  The cellular antenna is also located on the side of the device with the serial number label.  Do not mount this side of the device against metal.  Mounting the device with the GPS directed towards the sky will give the best results.  
+
+Battery powered devices do not require to be installed with a view of the sky but they should also not be mounted against or below metal.  Mount the device with the GPS directed toward the sky and please try to leave several inches of the device clear from metal above and beside the device.
+
+The device is water resistant but please do not pressure wash the device.
+
+
+
+
+BeMini
+Device default configuration is blank. BeMini in this state will not update but stay in "Ready State" In order to make BeMini update
+set the configuration and,
+press the button and hold for 10 seconds.
+ This is how the BeMini works:
+Mini is away from WIFI = will see GPS (valid 1) or not and use tower location (invalid 3)​
+Mini is in range of WIFI = ​ device will try GPS if it is invalid it will use Wifi (valid 4)
+When GPS fails and no WIFI around, then it will be invalid(3) at which point you only have cell id as location data
+Mini is not moving and within WIFI still - Mini will attempt GPS on every report besides initial message.
+Then goes back to option 1 or 2.
+You will never see Valid 2 with the BeMini.
+      4.	Battery is drained at 3.35v. Suggested Notification Rule to be set to 3.60v for Low Battery Alerts
+      5. Currently the options reported through ‘GPS Fix’ are as follows:
+1.	Valid(1) – valid GPS fix achieved;
+2.	Valid(2) – in motion-based tracking, indicates the device has not moved since last update uses the last valid GPS fix (ie to preserve battery that would be required to reacquire the same GPS); You will never see Valid 2 with the BeMini.
+3.	Invalid(3) -  GPS not available, reverting to tower (Cell ID) location;
+4.	Valid(4) – GPS not available, using closest Wi-Fi AP’s to resolve location.
+**W.r.t Wi-Fi 40 meters is the standard consumer grade router for accuracy, we have seen other routers we pickup that go farther range like 80 or 120 meters but those are exemptions and rare.  
+
+
+
+
+Similar to iPhones and Android phones, the BeMini detects the MAC addresses of the closest Wi-Fi access points, and sends the closest in the ‘Network’ field below (in addition with information about the tower it is reporting through):
+
+
+When Wi-Fi is used for location, within the ‘Network’ field, everything in the string beyond the text “assisted:” applies.
+
+
+BSSID means Broadcast SSID which is the MAC address of the Wi-Fi AP equipment. When you open your phone and look at Wi-Fi networks around you, those names are the SSID’s.    To be clear, we do not connect to the Wi-Fi – the device simply recognizes the presence of nearby Wi-Fi access points to use for location purposes.    
+
+
+Total Run Time/Engine hours is available from the BeMini.  The device will need to be hardwired and the power cable will need to be wired to ignition on/off in order to capture the total run time.  Run time data is also available in Geotab Engine measurements.
+When wiring the BeMini with the power adapter, extra data will populate in your dashboard.
+1.Ignition on/off (similar to BeWired)
+2.Engine Run Time
+
+
+See Below each sensor data and how is mapped to Geotab for each device.
+
